@@ -10,8 +10,8 @@
 .DS_Store
 /build
 /captures
-/libs/*.aar
-/libs/*.jar
+/libs/**/*.aar
+/libs/**/*.jar
 .externalNativeBuild
 .cxx
 local.properties
