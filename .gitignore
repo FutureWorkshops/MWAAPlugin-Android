@@ -10,7 +10,8 @@
 .DS_Store
 /build
 /captures
-/libs/aaprintscannerandroid-release.aar
+/libs/*.aar
+/libs/*.jar
 .externalNativeBuild
 .cxx
 local.properties
