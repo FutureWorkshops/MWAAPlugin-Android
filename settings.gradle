@@ -1,0 +1,3 @@
+include ':aa_plugin'
+
+rootProject.name = "AA Plugin"

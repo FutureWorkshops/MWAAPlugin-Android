@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="confirm_finger_rt">Right Thumb</string>
+    <string name="confirm_finger_ri">Right Index</string>
+    <string name="confirm_finger_rm">Right Middle</string>
+    <string name="confirm_finger_rr">Right Ring</string>
+    <string name="confirm_finger_rl">Right Little</string>
+    <string name="confirm_finger_lt">Left Thumb</string>
+    <string name="confirm_finger_li">Left Index</string>
+    <string name="confirm_finger_lm">Left Middle</string>
+    <string name="confirm_finger_lr">Left Ring</string>
+    <string name="confirm_finger_ll">Left Little</string>
+
+    <!-- AA -->
+    <string name="fingerprint_sdk_new_subject">New Subject</string>
+    <string name="fingerprint_sdk_cancel_yes">OK</string>
+    <string name="fingerprint_sdk_cancel_no">CANCEL</string>
+    <string name="fingerprint_sdk_prefix_rescan">Rescan:</string>
+    <string name="fingerprint_sdk_prefix_left">Left</string>
+    <string name="fingerprint_sdk_prefix_right">Right</string>
+    <string name="fingerprint_sdk_prefix_left_abv">L. </string>
+    <string name="fingerprint_sdk_prefix_right_abv">R. </string>
+    <string name="fingerprint_sdk_base_thumb">Thumb</string>
+    <string name="fingerprint_sdk_base_index">Index</string>
+    <string name="fingerprint_sdk_base_middle">Middle</string>
+    <string name="fingerprint_sdk_base_ring">Ring</string>
+    <string name="fingerprint_sdk_base_little">Little</string>
+    <string name="fingerprint_sdk_base_im">Index/Middle</string>
+    <string name="fingerprint_sdk_base_rl">Ring/Little</string>
+    <string name="fingerprint_sdk_base_4_finger">Four Fingers</string>
+    <string name="fingerprint_sdk_msg_cancel_confirm">All captured images will be discarded. Continue?</string>
+    <string name="fingerprint_sdk_msg_bg_issue">Please use a white background.</string>
+    <string name="fingerprint_sdk_msg_bg_changed">Please use the original background.</string>
+    <string name="fingerprint_sdk_msg_finger_too_close">The finger(s) are too close to the camera.</string>
+    <string name="fingerprint_sdk_msg_finger_too_far">The finger(s) are too far from the camera.</string>
+    <string name="fingerprint_sdk_msg_finger_outside">The finger(s) are outside of the view.</string>
+    <string name="fingerprint_sdk_msg_finger_exit">Please move finger(s) out of the view.</string>
+    <string name="fingerprint_sdk_msg_finger_enter">Please move next finger(s) into the view.</string>
+    <string name="fingerprint_sdk_msg_finger_not_in_position">Please move the finger(s) into position.</string>
+    <string name="fingerprint_sdk_status_scanning">SCANNING</string>
+    <string name="fingerprint_sdk_status_processing">PROCESSING</string>
+    <string name="fingerprint_sdk_status_rescanning">RESCANNING</string>
+    <string name="fingerprint_sdk_status_completed">CAPTURED</string>
+    <string name="error_message">Sorry! Something went wrong, please try again.</string>
+    <string name="retry">Retry</string>
+
+</resources>

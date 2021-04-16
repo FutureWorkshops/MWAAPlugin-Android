@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="app_name">التسجيل الذاتي للخصائص الحيوية</string>
+  <string name="cancel">إلغاء</string>
+  <string name="retry">إعادة المحاولة</string>
+  <string name="continue_lbl">متابعة</string>
+  <string name="fingerprint_sdk_new_subject">موضوع جديد</string>
+  <string name="fingerprint_sdk_cancel_yes">موافق</string>
+  <string name="fingerprint_sdk_cancel_no">إلغاء</string>
+  <string name="fingerprint_sdk_prefix_rescan">إعادة المسح:</string>
+  <string name="fingerprint_sdk_prefix_left">اليسار</string>
+  <string name="fingerprint_sdk_prefix_right">يمين</string>
+  <string name="fingerprint_sdk_prefix_left_abv">اليسار</string>
+  <string name="fingerprint_sdk_prefix_right_abv">يمين</string>
+  <string name="fingerprint_sdk_base_thumb">الإبهام</string>
+  <string name="fingerprint_sdk_base_index">السبابة</string>
+  <string name="fingerprint_sdk_base_middle">الوسطى</string>
+  <string name="fingerprint_sdk_base_ring">البنصر</string>
+  <string name="fingerprint_sdk_base_little">الخنصر</string>
+  <string name="fingerprint_sdk_base_im">إصبع السبابة\الوسطى</string>
+  <string name="fingerprint_sdk_base_rl">إصبع البنصر\الخنصر</string>
+  <string name="fingerprint_sdk_base_4_finger">أربعة أصابع</string>
+  <string name="fingerprint_sdk_msg_cancel_confirm">سيتم تجاهل جميع الصور الملتقطة. مواصلة؟</string>
+  <string name="fingerprint_sdk_msg_bg_issue">يرجى استخدام خلفية بيضاء.</string>
+  <string name="fingerprint_sdk_msg_bg_changed">يرجى استخدام الخلفية الأصلية.</string>
+  <string name="fingerprint_sdk_msg_finger_too_close">الأصابع قريبة جدًا من الكاميرا.</string>
+  <string name="fingerprint_sdk_msg_finger_too_far">الإصبع (الأصابع) بعيد جدًا عن الكاميرا.</string>
+  <string name="fingerprint_sdk_msg_finger_outside">الإصبع (الأصابع) خارج عن الإطار المخصص لها.</string>
+  <string name="fingerprint_sdk_msg_finger_exit">يرجى تحريك الإصبع (الأصابع) خارج الإطار المخصص لها.</string>
+  <string name="fingerprint_sdk_msg_finger_enter">يرجى تحريك الإصبع (الأصابع) التالية داخل الإطار المخصص لها.</string>
+  <string name="fingerprint_sdk_msg_finger_not_in_position">يرجى تحريك الأصابع إلى النطاق المخصص لها.</string>
+  <string name="fingerprint_sdk_status_scanning">يتم المسح</string>
+  <string name="fingerprint_sdk_status_processing">تتم المعالجة</string>
+  <string name="fingerprint_sdk_status_rescanning">إعادة المسح</string>
+  <string name="fingerprint_sdk_status_completed">تم الالتقاط</string>
+  <string name="confirm_finger_rt">الإبهام الأيمن</string>
+  <string name="confirm_finger_ri">السبابة اليمنى</string>
+  <string name="confirm_finger_rm">الوسطى الأيمن</string>
+  <string name="confirm_finger_rr">البنصر الأيمن</string>
+  <string name="confirm_finger_rl">الخنصر الأيمن</string>
+  <string name="confirm_finger_lt">الإبهام الأيسر</string>
+  <string name="confirm_finger_li">السبابة اليسرى</string>
+  <string name="confirm_finger_lm">الوسطى الأيسر</string>
+  <string name="confirm_finger_lr">البنصر الأيسر</string>
+  <string name="confirm_finger_ll">الخنصر الأيسر</string>
+
+ <string name="error_message">Sorry! Something went wrong, please try again.</string>
+</resources>

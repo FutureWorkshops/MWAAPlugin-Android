@@ -1,0 +1,1 @@
+Please, copy to this folder the aaprintscannerandroid-release.aar
