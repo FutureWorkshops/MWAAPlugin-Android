@@ -8,7 +8,7 @@ import com.futureworkshops.mobileworkflow.model.result.FileAnswerResult
 import com.futureworkshops.mobileworkflow.model.result.FileInformation
 import com.futureworkshops.mobileworkflow.model.result.PropertyResultComponent
 import com.futureworkshops.mobileworkflow.model.result.ResultComponent
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class AAAnswer (

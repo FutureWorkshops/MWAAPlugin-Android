@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-  <string name="app_name">التسجيل الذاتي للخصائص الحيوية</string>
-  <string name="cancel">إلغاء</string>
   <string name="retry">إعادة المحاولة</string>
-  <string name="continue_lbl">متابعة</string>
   <string name="fingerprint_sdk_new_subject">موضوع جديد</string>
   <string name="fingerprint_sdk_cancel_yes">موافق</string>
   <string name="fingerprint_sdk_cancel_no">إلغاء</string>
@@ -44,5 +41,5 @@
   <string name="confirm_finger_lr">البنصر الأيسر</string>
   <string name="confirm_finger_ll">الخنصر الأيسر</string>
 
- <string name="error_message">Sorry! Something went wrong, please try again.</string>
+ <string name="error_message">آسف! حدث خطأ ما. أعد المحاولة من فضلك.</string>
 </resources>

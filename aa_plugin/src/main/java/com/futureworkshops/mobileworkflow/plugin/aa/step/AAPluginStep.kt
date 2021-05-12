@@ -6,7 +6,7 @@ package com.futureworkshops.mobileworkflow.plugin.aa.step
 
 import android.os.Parcelable
 import com.futureworkshops.mobileworkflow.model.step.PluginStep
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class AAPluginStep(
