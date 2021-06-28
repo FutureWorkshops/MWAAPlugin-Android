@@ -10,17 +10,18 @@ import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStepConfigu
 import com.futureworkshops.mobileworkflow.model.WorkflowServiceResponse
 import com.futureworkshops.mobileworkflow.model.result.StepResult
 import com.futureworkshops.mobileworkflow.services.MobileWorkflowServices
+import com.futureworkshops.mobileworkflow.steps.DataTitle
 import com.futureworkshops.mobileworkflow.steps.Step
 
-internal class UIAAPluginStep(
-    private val title: String,
+internal data class UIAAPluginStep(
+    override val title: String,
     override var isOptional: Boolean = false,
     override val id: StepIdentifier = StepIdentifier(),
     override val uuid: String,
     private val nextButtonText: String = "Next",
     private val licenseURL: String = "",
     private val mode: String = ""
-) : Step {
+) : Step, DataTitle {
 
     override fun createView(
         stepResult: StepResult?,
@@ -42,4 +43,6 @@ internal class UIAAPluginStep(
             tintColor = workflowServiceResponse.tintColor
         )
     }
+
+    override fun copyWithNewTitle(title: String): Step = copy(title = title)
 }
