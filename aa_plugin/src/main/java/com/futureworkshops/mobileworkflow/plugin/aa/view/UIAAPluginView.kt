@@ -28,6 +28,8 @@ import com.futureworkshops.mobileworkflow.model.result.FragmentStepResult
 import com.futureworkshops.mobileworkflow.plugin.aa.model.AAAnswer
 import com.futureworkshops.mobileworkflow.plugin.aa.model.LicenseResponse
 import com.futureworkshops.mobileworkflow.plugin.aa.model.PreLicense
+import com.futureworkshops.mobileworkflow.ui.base.ErrorView
+import com.futureworkshops.mobileworkflow.ui.base.LoadingView
 import com.google.gson.reflect.TypeToken
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable
