@@ -54,6 +54,10 @@ android {
 
     testOptions.unitTests.isReturnDefaultValues = true
     testOptions.unitTests.isIncludeAndroidResources = true
+
+    aaptOptions {
+        noCompress("dex")
+    }
 }
 
 dependencies {

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.futureworkshops.mobileworkflow.plugin.aa"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <application>
+    <application
+        android:useEmbeddedDex="true">
         <activity
             android:name=".view.MobileWorkflowAAActivity"
             android:screenOrientation="portrait" />
