@@ -67,9 +67,12 @@ jobs:
           do
             git fetch --all --prune
             git rebase origin/main
+            set +e
             git push origin
             if [ $? -eq 0 ]; then
               break;
             fi
+            set -e
           done
+          set -e
           cd ..
