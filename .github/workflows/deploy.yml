@@ -1,0 +1,75 @@
+name: Deploy Plugin
+
+on:
+  push:
+    tags: '*.*.**'
+
+jobs:
+  publish:
+    environment: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout plugin
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./main/gradlew
+      - name: Extract Tag
+        id: tag
+        run: echo ::set-output name=name::${GITHUB_REF#refs/*/}
+      - name: Get Plugin name
+        id: plugin_info
+        run: |
+          INCLUDE_LINE="$(cat ./main/settings.gradle | grep -e 'include' | sed "s|':.*'||g")"
+          PLUGIN_LINE="$(cat ./main/settings.gradle | grep -e 'include' | sed "s|${INCLUDE_LINE}||g")"
+          PLUGIN_NAME="$(echo "${PLUGIN_LINE}" | sed "s|[':]||g")"
+          echo ::set-output name=name::${PLUGIN_NAME}
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.FW_MWPODSPEC_DEPLOY_PAT }}
+          repository: ${{ secrets.FW_ANDROID_MW_DISTRIBUTION_REPO }}
+          path: ${{ secrets.FW_ANDROID_MW_DISTRIBUTION_NAME }}
+      - name: Publish
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+          BUILD_VERSION: ${{ steps.tag.outputs.name }}
+          GITHUB_PAT: ${{ secrets.FW_MWPODSPEC_DEPLOY_PAT }}
+        run: |
+          cd main
+          ./gradlew clean publish -Pproject.buildversion="${BUILD_VERSION}" -Pproject.buildnumber="${BUILD_NUMBER}" --refresh-dependencies
+          cd ..
+      - name: Commit new version
+        env:
+          PLUGIN: ${{ steps.plugin_info.outputs.name }}
+          TAG_VERSION: ${{ steps.tag.outputs.name }}
+          DIST_PATH: ${{ secrets.FW_ANDROID_MW_DISTRIBUTION_NAME }}
+        run: |
+          cd "${DIST_PATH}"
+          git config --local user.email "c-i@futureworkshops.com"
+          git config --local user.name "Continuous Integration"
+          git add .
+          git commit -m "${PLUGIN} [${TAG_VERSION}]"
+          cd ..
+      - name: Push new version
+        env:
+          DIST_PATH: ${{ secrets.FW_ANDROID_MW_DISTRIBUTION_NAME }}
+        run: |
+          cd "${DIST_PATH}"
+          git checkout main
+          while true
+          do
+            git fetch --all --prune
+            git rebase origin/main
+            git push origin
+            if [ $? -eq 0 ]; then
+              break;
+            fi
+          done
+          cd ..
