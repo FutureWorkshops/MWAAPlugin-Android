@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdk = 31
+    buildToolsVersion = "31.0.0"
 
     defaultConfig {
-        minSdkVersion(25)
-        targetSdkVersion(30)
+        minSdk = 25
+        targetSdk = 30
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -62,9 +62,9 @@ dependencies {
     val fromMaven = project.property("project.mavenCore")?.toString()?.toBoolean() ?: false
     if (findProject(":mw-core") == null || fromMaven) {
         val version = project.property("project.coreVersion")
-        implementation("com.futureworkshops.mobileworkflow:mw-core:$version")
+        api("com.futureworkshops.mobileworkflow:mw-core:$version")
     } else {
-        implementation(project(":mw-core"))
+        api(project(":mw-core"))
     }
 
     implementation("com.google.android.material:material:1.3.0")
