@@ -11,8 +11,6 @@ android {
     buildToolsVersion("30.0.3")
 
     defaultConfig {
-        versionCode = Integer.parseInt(project.property("project.buildnumber")?.toString())
-        versionName = project.property("project.buildversion")?.toString()
         minSdkVersion(25)
         targetSdkVersion(30)
 
@@ -29,12 +27,10 @@ android {
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false
-            isDebuggable = true
         }
 
         getByName("release") {
             isMinifyEnabled = true
-            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
