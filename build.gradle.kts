@@ -11,7 +11,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.0")
+        classpath("com.android.tools.build:gradle:7.0.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     }
 }
@@ -21,6 +21,11 @@ allprojects {
         google()
         mavenCentral()
         maven { url = uri("https://jitpack.io") }
+
+        maven {
+            name = "Local maven"
+            setUrl(project.rootProject.file("../MobileWorkflowCore-Android-Distribution").path)
+        }
 
         maven {
             name = "Mobile Workflow"
