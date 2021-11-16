@@ -24,7 +24,7 @@ import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStepConfigu
 import com.futureworkshops.mobileworkflow.data.filehandler.IMWFileHandler
 import com.futureworkshops.mobileworkflow.data.network.task.URLIAsyncTask
 import com.futureworkshops.mobileworkflow.data.network.task.URLMethod
-import com.futureworkshops.mobileworkflow.model.result.FragmentStepResult
+import com.futureworkshops.mobileworkflow.model.result.AnswerResult
 import com.futureworkshops.mobileworkflow.plugin.aa.model.AAAnswer
 import com.futureworkshops.mobileworkflow.plugin.aa.model.LicenseResponse
 import com.futureworkshops.mobileworkflow.plugin.aa.model.PreLicense
@@ -92,14 +92,9 @@ internal class UIAAPluginView(
         AAFileInteractor.shared = AAFileInteractor(activity?.applicationContext, fragmentStepConfiguration.mobileWorkflowServices.fileHandler)
     }
 
-    override fun createResults(): FragmentStepResult<AAAnswer> {
-        return FragmentStepResult(
-            identifier = id.id,
-            answer = AAAnswer(
-                fingerPrintPdfPath = fingerPrintPdfPath
-            )
-        )
-    }
+    override fun getStepOutput(): AnswerResult = AAAnswer(
+        fingerPrintPdfPath = fingerPrintPdfPath
+    )
 
     override fun isValidInput(): Boolean {
         var isValid = true
