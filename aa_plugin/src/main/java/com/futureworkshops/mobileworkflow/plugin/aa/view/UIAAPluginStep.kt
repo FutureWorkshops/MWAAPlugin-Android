@@ -30,7 +30,6 @@ internal data class UIAAPluginStep(
     ): FragmentStep {
         return UIAAPluginView(
             FragmentStepConfiguration(
-            id = id,
             isOptional = isOptional,
             title = mobileWorkflowServices.localizationService.getTranslation(title),
             text = null,
