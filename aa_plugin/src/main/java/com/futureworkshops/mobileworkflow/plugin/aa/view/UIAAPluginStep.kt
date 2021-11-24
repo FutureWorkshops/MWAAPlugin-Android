@@ -4,7 +4,7 @@
 
 package com.futureworkshops.mobileworkflow.plugin.aa.view
 
-import com.futureworkshops.mobileworkflow.StepIdentifier
+
 import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStep
 import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStepConfiguration
 import com.futureworkshops.mobileworkflow.model.WorkflowServiceResponse
@@ -15,7 +15,7 @@ import com.futureworkshops.mobileworkflow.steps.Step
 internal data class UIAAPluginStep(
     val title: String,
     override var isOptional: Boolean = false,
-    override val id: StepIdentifier = StepIdentifier(),
+    override val id: String,
     override val uuid: String,
     private val nextButtonText: String = "Next",
     private val licenseURL: String = "",
