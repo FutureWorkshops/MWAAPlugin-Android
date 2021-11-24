@@ -8,7 +8,7 @@ import com.futureworkshops.mobileworkflow.StepIdentifier
 import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStep
 import com.futureworkshops.mobileworkflow.backend.views.step.FragmentStepConfiguration
 import com.futureworkshops.mobileworkflow.model.WorkflowServiceResponse
-import com.futureworkshops.mobileworkflow.model.result.StepResult
+import com.futureworkshops.mobileworkflow.model.result.AnswerResult
 import com.futureworkshops.mobileworkflow.services.MobileWorkflowServices
 import com.futureworkshops.mobileworkflow.steps.Step
 
@@ -23,7 +23,7 @@ internal data class UIAAPluginStep(
 ) : Step {
 
     override fun createView(
-        stepResult: StepResult?,
+        stepResult: AnswerResult?,
         mobileWorkflowServices: MobileWorkflowServices,
         workflowServiceResponse: WorkflowServiceResponse,
         selectedWorkflowId: String
