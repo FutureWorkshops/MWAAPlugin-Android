@@ -16,7 +16,7 @@ internal data class UIAAPluginStep(
     val title: String,
     override var isOptional: Boolean = false,
     override val id: String,
-    override val uuid: String,
+
     private val nextButtonText: String = "Next",
     private val licenseURL: String = "",
     private val mode: String = ""

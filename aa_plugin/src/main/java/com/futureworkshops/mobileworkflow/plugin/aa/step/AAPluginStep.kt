@@ -11,9 +11,9 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class AAPluginStep(
     override val type: String,
-    override val identifier: String,
+
     override val title: String,
-    override val uuid: String,
+
     val optional: Boolean,
     val licenseURL: String = "",
     val mode: String = ""
