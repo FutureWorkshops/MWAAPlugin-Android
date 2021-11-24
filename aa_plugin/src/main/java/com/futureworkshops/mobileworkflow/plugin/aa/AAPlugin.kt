@@ -19,7 +19,6 @@ internal class AAPlugin: DeserializeStep<AAPluginStep>(
             title = step.title,
             isOptional = step.optional,
             id = step.id,
-
             licenseURL = step.licenseURL,
             mode = step.mode
         )
