@@ -88,8 +88,8 @@ internal class UIAAPluginView(
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        context?.let { outputDirectory = fragmentStepConfiguration.mobileWorkflowServices.fileHandler.getOutputDirectory(it) }
-        AAFileInteractor.shared = AAFileInteractor(activity?.applicationContext, fragmentStepConfiguration.mobileWorkflowServices.fileHandler)
+        context?.let { outputDirectory = fragmentStepConfiguration.services.fileHandler.getOutputDirectory(it) }
+        AAFileInteractor.shared = AAFileInteractor(activity?.applicationContext, fragmentStepConfiguration.services.fileHandler)
     }
 
     override fun getStepOutput(): AnswerResult = AAAnswer(
@@ -136,7 +136,7 @@ internal class UIAAPluginView(
 
 
         val executable =
-            fragmentStepConfiguration.mobileWorkflowServices.serviceContainer
+            fragmentStepConfiguration.services.serviceContainer
                 .performSingle<URLIAsyncTask<PreLicense, LicenseResponse>, LicenseResponse>(
                     task
                 )
@@ -164,7 +164,7 @@ internal class UIAAPluginView(
     }
 
     private fun createPDFFromFingerList(fingerImagePathList: MutableList<String>) {
-        val pdfFile = fragmentStepConfiguration.mobileWorkflowServices.fileHandler.createFile(outputDirectory.absolutePath, "pdf")
+        val pdfFile = fragmentStepConfiguration.services.fileHandler.createFile(outputDirectory.absolutePath, "pdf")
 
         Completable
             .fromAction {
@@ -195,7 +195,7 @@ internal class UIAAPluginView(
 
                 val fos: OutputStream
                 try {
-                    fos = fragmentStepConfiguration.mobileWorkflowServices.fileHandler.createFileOutputStream(pdfFile.absolutePath)
+                    fos = fragmentStepConfiguration.services.fileHandler.createFileOutputStream(pdfFile.absolutePath)
                     document.writeTo(fos)
                     document.close()
                     fos.close()
