@@ -17,8 +17,7 @@ internal class AAPlugin: DeserializeStep<AAPluginStep>(
     override fun createUIStep(step: AAPluginStep): Step =
         UIAAPluginStep(
             title = step.title,
-            isOptional = step.optional,
-            id = step.id,
+                id = step.id,
             licenseURL = step.licenseURL,
             mode = step.mode
         )

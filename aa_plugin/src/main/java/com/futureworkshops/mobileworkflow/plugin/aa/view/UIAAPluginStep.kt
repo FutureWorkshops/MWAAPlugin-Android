@@ -14,7 +14,6 @@ import com.futureworkshops.mobileworkflow.steps.Step
 
 internal data class UIAAPluginStep(
     val title: String,
-    override var isOptional: Boolean = false,
     override val id: String,
     private val nextButtonText: String = "Next",
     private val licenseURL: String = "",
@@ -29,8 +28,7 @@ internal data class UIAAPluginStep(
     ): FragmentStep {
         return UIAAPluginView(
             FragmentStepConfiguration(
-            isOptional = isOptional,
-            title = services.localizationService.getTranslation(title),
+                        title = services.localizationService.getTranslation(title),
             text = null,
             nextButtonText = services.localizationService.getTranslation(nextButtonText),
             services = services),
