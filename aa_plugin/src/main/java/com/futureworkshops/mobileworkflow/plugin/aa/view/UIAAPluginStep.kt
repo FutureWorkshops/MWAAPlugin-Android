@@ -23,8 +23,7 @@ internal data class UIAAPluginStep(
     override fun createView(
         stepResult: AnswerResult?,
         services: ServiceBox,
-        workflowServiceResponse: WorkflowServiceResponse,
-        selectedWorkflowId: String
+        workflowServiceResponse: WorkflowServiceResponse
     ): FragmentStep {
         return UIAAPluginView(
             FragmentStepConfiguration(
