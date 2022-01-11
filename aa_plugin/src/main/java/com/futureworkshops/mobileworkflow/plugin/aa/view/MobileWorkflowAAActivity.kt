@@ -177,9 +177,10 @@ open class MobileWorkflowAAActivity : AppCompatActivity() {
 
     private fun onFingerCaptureSuccess(fingerInfoList: List<FingerInfo>) {
 
-        val imagePathList = AAFileInteractor.shared?.getImagePathsFromFingerInfo(fingerInfoList)
         val intent = Intent()
-        intent.putStringArrayListExtra(FINGER_INFO_LIST_EXTRA, ArrayList(imagePathList))
+        AAFileInteractor.shared?.getImagePathsFromFingerInfo(fingerInfoList)?.let {
+            intent.putStringArrayListExtra(FINGER_INFO_LIST_EXTRA, ArrayList(it))
+        }
         setResult(RC_AA_FINGER_CAPTURE, intent)
 
         finish()

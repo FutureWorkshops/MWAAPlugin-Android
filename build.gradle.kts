@@ -5,13 +5,13 @@ if (project.rootProject.file("../gradle_files/common.gradle.kts").exists()) {
 }
 
 buildscript {
-    val kotlinVersion by extra("1.4.30")
+    val kotlinVersion by extra("1.6.10")
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.3")
+        classpath("com.android.tools.build:gradle:7.0.4")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
     }
 }
