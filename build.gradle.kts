@@ -5,7 +5,7 @@ if (project.rootProject.file("../gradle_files/common.gradle.kts").exists()) {
 }
 
 buildscript {
-    val kotlinVersion by extra("1.6.10")
+    val kotlinVersion by extra("1.5.32")
     repositories {
         google()
         mavenCentral()
