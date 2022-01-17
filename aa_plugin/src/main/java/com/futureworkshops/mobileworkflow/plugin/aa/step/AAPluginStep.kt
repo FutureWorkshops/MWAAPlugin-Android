@@ -5,6 +5,7 @@
 package com.futureworkshops.mobileworkflow.plugin.aa.step
 
 import android.os.Parcelable
+import com.futureworkshops.mobileworkflow.model.configuration.NavigationItem
 import com.futureworkshops.mobileworkflow.model.configuration.StepLink
 import com.futureworkshops.mobileworkflow.model.step.PluginStep
 import kotlinx.parcelize.Parcelize
@@ -15,6 +16,7 @@ data class AAPluginStep(
     override val type: String,
     override val title: String,
     override val links: List<StepLink>,
+    override val navigationItems: List<NavigationItem>,
     val optional: Boolean,
     val licenseURL: String = "",
     val mode: String = ""
