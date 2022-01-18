@@ -27,6 +27,7 @@
 
 -keep class * extends com.futureworkshops.mobileworkflow.model.result.AnswerResult { public *;  protected *; }
 
+-keep class * extends com.futureworkshops.mobileworkflow.model.step.PluginStep { public *; protected *; }
 # Prevent R8 from leaving Data object members always null
 -keepclassmembers,allowobfuscation class * {
   @com.google.gson.annotations.SerializedName <fields>;
