@@ -15,7 +15,6 @@ import androidx.core.view.ViewCompat
 import com.aatechintl.aaprintscanner.ActivityHandler
 import com.futureworkshops.mobileworkflow.extensions.decodeBase64ToByteArray
 import java.util.*
-import kotlin.collections.ArrayList
 
 open class MobileWorkflowAAActivity : AppCompatActivity() {
 
