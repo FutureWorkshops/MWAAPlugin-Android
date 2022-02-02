@@ -25,11 +25,11 @@ android {
     kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
 
     buildTypes {
-        getByName("debug") {
+        debug {
             isMinifyEnabled = false
         }
 
-        getByName("release") {
+        release {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
