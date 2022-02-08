@@ -5,7 +5,7 @@
 package com.futureworkshops.mobileworkflow.plugin.aa
 
 import com.futureworkshops.mobileworkflow.domain.DeserializeStep
-import com.futureworkshops.mobileworkflow.StepIdentifier
+
 import com.futureworkshops.mobileworkflow.plugin.aa.step.AAPluginStep
 import com.futureworkshops.mobileworkflow.plugin.aa.view.UIAAPluginStep
 import com.futureworkshops.mobileworkflow.steps.Step
@@ -17,9 +17,7 @@ internal class AAPlugin: DeserializeStep<AAPluginStep>(
     override fun createUIStep(step: AAPluginStep): Step =
         UIAAPluginStep(
             title = step.title,
-            isOptional = step.optional,
-            id = StepIdentifier(step.identifier),
-            uuid = step.uuid,
+                id = step.id,
             licenseURL = step.licenseURL,
             mode = step.mode
         )

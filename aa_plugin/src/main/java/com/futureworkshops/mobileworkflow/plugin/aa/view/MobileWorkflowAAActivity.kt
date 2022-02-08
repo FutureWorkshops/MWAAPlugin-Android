@@ -14,8 +14,7 @@ import androidx.core.text.TextUtilsCompat
 import androidx.core.view.ViewCompat
 import com.aatechintl.aaprintscanner.ActivityHandler
 import com.futureworkshops.mobileworkflow.extensions.decodeBase64ToByteArray
-import java.util.Locale
-import kotlin.collections.ArrayList
+import java.util.*
 
 open class MobileWorkflowAAActivity : AppCompatActivity() {
 
@@ -177,9 +176,10 @@ open class MobileWorkflowAAActivity : AppCompatActivity() {
 
     private fun onFingerCaptureSuccess(fingerInfoList: List<FingerInfo>) {
 
-        val imagePathList = AAFileInteractor.shared?.getImagePathsFromFingerInfo(fingerInfoList)
         val intent = Intent()
-        intent.putStringArrayListExtra(FINGER_INFO_LIST_EXTRA, ArrayList(imagePathList))
+        AAFileInteractor.shared?.getImagePathsFromFingerInfo(fingerInfoList)?.let {
+            intent.putStringArrayListExtra(FINGER_INFO_LIST_EXTRA, ArrayList(it))
+        }
         setResult(RC_AA_FINGER_CAPTURE, intent)
 
         finish()
