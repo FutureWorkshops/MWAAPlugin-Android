@@ -251,7 +251,6 @@ internal class UIAAPluginView(
         context?.let { safeContext ->
             footer.visibility = View.GONE
             aAPart = UIAAPart(safeContext)
-            aAPart.style(surveyTheme)
             content.add(aAPart)
         }
 
