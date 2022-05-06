@@ -65,8 +65,7 @@ class AAFileInteractor(private val appContext: Context?, private val fileHandler
 internal class UIAAPluginView(
     private val fragmentStepConfiguration: FragmentStepConfiguration,
     val licenseURL: String,
-    val mode: String,
-    val tintColor: Int?
+    val mode: String
 ) : FragmentStep(fragmentStepConfiguration)  {
 
     private lateinit var outputDirectory: File
@@ -232,14 +231,14 @@ internal class UIAAPluginView(
     private fun showLoading() {
         context?.let {
             content.clear()
-            content.add(LoadingView(requireContext(), tintColor = tintColor))
+            content.add(LoadingView(requireContext()))
         }
     }
 
     private fun showError() {
         context?.let {
             content.clear()
-            val errorView = ErrorView(context = requireContext(), tintColor = tintColor).apply {
+            val errorView = ErrorView(context = requireContext()).apply {
                 setRetryFun { startFingerprintCapture() }
             }
             content.add(errorView)
@@ -252,7 +251,6 @@ internal class UIAAPluginView(
         context?.let { safeContext ->
             footer.visibility = View.GONE
             aAPart = UIAAPart(safeContext)
-            aAPart.style(surveyTheme)
             content.add(aAPart)
         }
 

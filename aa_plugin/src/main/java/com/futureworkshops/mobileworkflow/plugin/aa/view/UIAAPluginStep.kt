@@ -33,8 +33,7 @@ internal data class UIAAPluginStep(
             services = services),
             licenseURL = services.urlTaskBuilder.urlHelper.resolveUrl(
                 appServiceResponse.server, licenseURL, appServiceResponse.session)?: "",
-            mode = mode,
-            tintColor = appServiceResponse.tintColor
+            mode = mode
         )
     }
 }
