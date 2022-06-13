@@ -76,3 +76,12 @@ jobs:
           done
           set -e
           cd ..
+      - name: Prepare mappings
+        run: |
+          cd main
+          ./gradlew copyOutputs
+          cd ..
+      - uses: actions/upload-artifact@v3
+        with:
+          name: mappings
+          path: main/build/outputs/mapping/release
