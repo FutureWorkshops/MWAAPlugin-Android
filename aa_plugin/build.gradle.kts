@@ -15,6 +15,7 @@ android {
         targetSdk = 30
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "PLUGIN_VERSION", "\"${project.property("project.buildversion")?.toString()}\"")
     }
 
     compileOptions {
